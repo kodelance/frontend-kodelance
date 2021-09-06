@@ -1,11 +1,18 @@
 import Button from '@material-ui/core/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, substract } from '../application/store/reducer';
+import { add, substract } from '../application/store/slice';
+import { getTest } from '../infrastructure/api';
 
 function App() {
   const number = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
-
+  getTest()
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   return (
     <>
       <h1>{number}</h1>

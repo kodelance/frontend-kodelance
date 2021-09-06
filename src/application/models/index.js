@@ -1,4 +1,4 @@
-export const models = {
+const models = {
   state: {
     value: 0,
   },
@@ -16,3 +16,5 @@ export const models = {
     },
   },
 };
+
+export default models;
