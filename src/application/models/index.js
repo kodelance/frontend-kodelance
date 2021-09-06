@@ -1,20 +1,28 @@
+/**
+ * an entity for state management
+ * @returns json
+ */
+
 const models = {
-  state: {
-    value: 0,
-  },
-  reducer: {
-    counter: {
-      add(state) {
-        state.value += 1;
+  reducer: [
+    {
+      state: {
+        value: 0,
       },
-      substract(state) {
-        state.value -= 1;
-      },
-      addByValue(state, action) {
-        state.value += action.payload;
+      name: 'counter',
+      functions: {
+        add(state) {
+          state.value += 1;
+        },
+        substract(state) {
+          state.value -= 1;
+        },
+        addByValue(state, action) {
+          state.value += action.payload;
+        },
       },
     },
-  },
+  ],
 };
 
 export default models;
