@@ -1,4 +1,3 @@
-import { createTheme } from '@material-ui/core';
 import { green, purple } from '@material-ui/core/colors';
 
 const normalTheme = {
