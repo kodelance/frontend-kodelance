@@ -1,7 +1,7 @@
 import { createTheme } from '@material-ui/core';
 import { green, purple } from '@material-ui/core/colors';
 
-const Theme = createTheme({
+const normalTheme = {
   palette: {
     primary: {
       main: purple[500],
@@ -10,9 +10,8 @@ const Theme = createTheme({
       main: green[500],
     },
   },
-});
+};
 
 const ROOTURL = 'https://6129e8ea068adf001789b96a.mockapi.io/';
 
-
-export {ROOTURL, Theme};
+export { ROOTURL, normalTheme };

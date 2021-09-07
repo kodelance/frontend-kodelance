@@ -19,4 +19,17 @@ const counterSlice = createSlice({
 });
 
 export const { add, substract } = counterSlice.actions;
-export default counterSlice.reducer;
+export const counterReducer = counterSlice.reducer;
+
+const themeSlice = createSlice({
+  name: reducer[1].name,
+  initialState: {
+    ...reducer[1].state,
+  },
+  reducers: {
+    ...reducer[1].functions,
+  },
+});
+
+export const { changeTheme } = themeSlice.actions;
+export const themeReducer = themeSlice.reducer;

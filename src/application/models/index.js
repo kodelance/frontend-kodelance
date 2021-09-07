@@ -1,7 +1,4 @@
-/**
- * an entity for state management
- * @returns json
- */
+import { normalTheme } from '../common';
 
 const models = {
   reducer: [
@@ -19,6 +16,17 @@ const models = {
         },
         addByValue(state, action) {
           state.value += action.payload;
+        },
+      },
+    },
+    {
+      state: {
+        theme: normalTheme,
+      },
+      name: 'theme',
+      functions: {
+        changeTheme(state, action) {
+          state.theme = action.payload;
         },
       },
     },

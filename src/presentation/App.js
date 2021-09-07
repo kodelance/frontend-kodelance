@@ -1,15 +1,18 @@
+import { createTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import store from '../application/store';
 import { RouterConfig } from './routes';
 function App() {
+  const theme = useSelector((state) => state.theme.theme);
+  const theming = createTheme(theme);
+
   return (
-    <Provider store={store}>
+    <ThemeProvider theme={theming}>
       <Router>
         <RouterConfig />
       </Router>
-    </Provider>
+    </ThemeProvider>
   );
 }
 
