@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, substract } from '../../application/store/slice';
+import { add, changeTheme, substract } from '../../application/store/slice';
 import { getTest } from '../../infrastructure/api';
 
 function Counter() {
@@ -30,6 +30,13 @@ function Counter() {
         onClick={() => dispatch(substract())}
       >
         -
+      </Button>
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => dispatch(changeTheme({}))}
+      >
+        change
       </Button>
     </>
   );
